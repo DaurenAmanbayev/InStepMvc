@@ -1,0 +1,114 @@
+﻿@model InStep.Models.SettingUser
+
+@{
+    ViewBag.Title = "Setting User Profile";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section head {
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+}
+
+@section body{
+@using (Html.BeginForm("SettingProfile", "Setting", FormMethod.Post))
+{
+    <div class="mui-container">
+        <div class="mui-row">
+            <div class="mui--text-center">
+                <h2>Настройки профиля</h2>
+            </div>
+        </div>
+
+        <div class="mui-panel">
+            <div class="mui-row">
+                <div class="mui-col-md-1 mui-col-md-offset-4">
+                    <h4>E-mail</h4>
+                </div>
+                <div class=" mui-col-md-3 mui-textfield">
+                    @Html.TextBox("Email", Model.Email, new { @readonly = "readonly" })
+                </div>
+            </div>
+            </div>
+          
+            <div class="mui-panel">
+                <div class="mui-row">
+                    <div class="mui-col-md-1 mui-col-md-offset-4">
+                        <h4>Имя</h4>
+                    </div>
+                    <div class=" mui-col-md-3 mui-textfield">
+                        @Html.TextBox("FirstName", Model.FirstName)
+                    </div>
+                    <div class=" mui-col-md-3 ">
+                        <h5>@Html.ValidationMessage("FirstName")</h5>
+                    </div>
+                </div>
+
+
+                <div class="mui-row">
+                    <div class="mui-col-md-1 mui-col-md-offset-4 ">
+                        <h4>Фамилия</h4>
+                    </div>
+                    <div class="mui-textfield mui-col-md-3">
+                        @Html.TextBox("LastName", Model.LastName)
+                    </div>
+                    <div class=" mui-col-md-3 ">
+                        <h5>@Html.ValidationMessage("LastName")</h5>
+                    </div>
+                </div>
+
+
+                <div class="mui-row">
+                    <div class="mui-col-md-1 mui-col-md-offset-4 ">
+                        <h4>Отчество</h4>
+                    </div>
+                    <div class="mui-textfield mui-col-md-3">
+                        @Html.TextBox("SecondName", Model.SecondName)
+                    </div>
+                    <div class=" mui-col-md-3 ">
+                        <h5>@Html.ValidationMessage("SecondName")</h5>
+                    </div>
+                </div>
+
+
+                <div class="mui-row">
+                    <div class="mui-col-md-1 mui-col-md-offset-4 ">
+                        <h4>Телефон</h4>
+                    </div>
+                    <div class="mui-textfield mui-col-md-3">
+                        @Html.TextBox("PhoneNumber", Model.PhoneNumber)
+                    </div>
+                    <div class=" mui-col-md-3 ">
+                        <h5>@Html.ValidationMessage("PhoneNumber")</h5>
+                    </div>
+                </div>
+
+
+                <div class="mui-row">
+                    <div class="mui-col-md-1 mui-col-md-offset-4">
+                        <h4>Пол</h4>
+                    </div>
+                    <div class="mui-col-md-3">
+                        <div class="mui-radio">
+                            Мужской:@Html.RadioButton("Sex", Model.Sex)
+                        </div>
+                        <div class="mui-radio">
+                            Женский:@Html.RadioButton("Sex", !Model.Sex)
+                        </div>
+                    </div>
+                </div>
+
+
+                <br />
+
+                @Html.ValidationSummary()
+                <div class="mui-col-md-offset-4 mui-col-md-5 mui--align-middle">
+                    <input class="mui-btn mui-btn--raised mui-btn--primary" type="submit" value="Сохранить" />
+                    <input class="mui-btn mui-btn--raised mui-btn--primary" type="submit" value="Отменить" />
+                </div>
+            </div>
+
+        </div>
+}
+}

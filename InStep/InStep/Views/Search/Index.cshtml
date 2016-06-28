@@ -1,0 +1,126 @@
+﻿@model InStep.Models.SearchUser
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section head {
+}
+
+@section body {
+
+    <div class="mui-container">
+        <div class="mui-row">
+            @using (Html.BeginForm("Index", "Search", FormMethod.Post))
+            {
+                <div class="mui-panel">
+                    <center><h2>Поиск пользователя</h2></center>
+                    <div class="mui-col-md-offset-4 mui-col-md-4">
+                        <div class="mui-row">
+                            <div class="mui-textfield mui-col-md-10">
+                                @Html.TextBox("SearchString", Model.SearchString, new { placeholder = "Введите фамилию" })
+                            </div>
+                            <div class="mui-col-md-2">
+                                <input class="mui-btn mui-btn--primary" type="submit" value="найти" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mui-col-md-12">
+                        <div class="mui-col-md-8">
+                            @if (Model.Users == null)
+                            {
+                                <div class="mui-textfield">
+                                    <label><h3>Никого не найдено</h3></label>
+                                </div>
+                                
+                            }
+                            else
+                            {
+                                @*@if (Model.Users.Count() <= 0)
+                                {
+                                    <div class="mui-textfield">
+                                        <label><h3>Никого не найдено</h3></label>
+                                    </div>
+                                }*@
+                                foreach (var item in Model.Users)
+                                {
+
+                                    <div class="mui-textfield">
+                                        <div>
+                                            <label>Имя:</label>
+                                            @item.FirstName
+                                        </div>
+                                        <div>
+                                            <label>Фамилия:</label>
+                                            @item.LastName
+                                        </div>
+                                        <div>
+                                            <label>Отчество:</label>
+                                            @item.SecondName
+                                        </div>
+                                        <div>
+                                            <label>Пол:</label>
+                                            @item.Sex
+                                        </div>
+                                    </div>
+                                    <br />
+                                }
+                            }
+                        </div>
+                        <div class="mui-col-md-4">
+                            <div class="mui-col-md-12">
+                                <center><h4>Расширенный поиск</h4></center>
+                            </div>
+                            @*страна*@
+                            <div class="mui-dropdown">
+                                <button class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
+                                    Страна
+                                    <span class="mui-caret"></span>
+                                </button>
+                                <ul class="mui-dropdown__menu">
+                                    @foreach (var item in Model.Countries)
+                                    {
+                                        <li><a href="#">@item.CountryName</a></li>
+                                    }
+                                </ul>
+                            </div>
+                            @*город*@
+                            <div class="mui-dropdown mui-col-md-offset-2">
+                                <button class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
+                                    Город
+                                    <span class="mui-caret"></span>
+                                </button>
+                                <ul class="mui-dropdown__menu">
+                                    @foreach (var item in Model.Cities)
+                                    {
+                                        <li><a href="#">@item.CityName</a></li>
+                                    }
+                                </ul>
+                            </div>
+                            @*Адрес*@
+                            <div class="mui-textfield">
+                                @Html.TextBox("SearchAddres", Model.SearchAddres, new { placeholder = "адрес" })
+                            </div>
+                            @*Пол*@
+                            <div class="mui-col-md-offset-4 mui-col-md-8">
+                                <div class="mui-textfield">
+                                    @Html.Label("Пол:")
+                                </div>
+                                <div class="mui-radio">
+                                    @Html.Label("м") @Html.RadioButton("sex", Model.SearchSex, true)
+                                    @Html.Label("ж") @Html.RadioButton("sex", !Model.SearchSex)
+                                </div>
+                            </div>
+                            @*Дата рождения*@
+                            <div class="mui-col-md-12">
+                                @Html.Label("Дата рождения")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+

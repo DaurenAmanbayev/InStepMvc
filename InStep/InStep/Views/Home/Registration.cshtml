@@ -1,0 +1,182 @@
+﻿@model InStep.Models.RegisterUserData
+
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section head {
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script> (function (factory) {
+     if (typeof define === "function" && define.amd) {
+
+         // AMD. Register as an anonymous module.
+         define(["../widgets/datepicker"], factory);
+     } else {
+
+         // Browser globals
+         factory(jQuery.datepicker);
+     }
+ }(function (datepicker) {
+
+     datepicker.regional.ru = {
+         closeText: "Закрыть",
+         prevText: "&#x3C;Пред",
+         nextText: "След&#x3E;",
+         currentText: "Сегодня",
+         monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+         "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+         monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн",
+         "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+         dayNames: ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"],
+         dayNamesShort: ["вск", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
+         dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+         weekHeader: "Нед",
+         dateFormat: "dd.mm.yy",
+         firstDay: 1,
+         isRTL: false,
+         showMonthAfterYear: false,
+         yearSuffix: ""
+     };
+     datepicker.setDefaults(datepicker.regional.ru);
+
+     return datepicker.regional.ru;
+
+ }));</script>
+}
+
+@section body{
+    <div class="mui-container">
+        <div class="mui-row">
+            <div class="mui--text-center">
+                <h2>Регистрация</h2>
+            </div>
+        </div>
+
+        @using (Html.BeginForm("Registration", "Home", FormMethod.Post))
+        {
+            <div class="mui-panel">
+                <div class="mui-row">
+                    <div class="mui-col-md-1 mui-col-md-offset-4">
+                        <h4>Имя</h4>
+                    </div>
+                    <div class=" mui-col-md-3 mui-textfield">
+                        @Html.TextBox("FirstName", Model.FirstName)
+                    </div>
+                    <div class=" mui-col-md-3 ">
+                        <h5>@Html.ValidationMessage("FirstName")</h5>
+                    </div>
+                </div>
+
+                <div class="mui-row">
+                    <div class="mui-col-md-1 mui-col-md-offset-4 ">
+                        <h4>Фамилия</h4>
+                    </div>
+
+                    <div class="mui-textfield mui-col-md-3">
+                        @Html.TextBox("LastName", Model.LastName)
+                    </div>
+                    <div class=" mui-col-md-3 ">
+                        <h5>@Html.ValidationMessage("LastName")</h5>
+                    </div>
+                </div>
+
+                <div class="mui-row">
+                    <div class="mui-col-md-1 mui-col-md-offset-4 ">
+                        <h4>Отчество</h4>
+                    </div>
+                    <div class="mui-textfield mui-col-md-3">
+                        @Html.TextBox("SecondName", Model.SecondName)
+                    </div>
+                </div>
+
+                <div class="mui-row">
+                    <div class="mui-col-md-1 mui-col-md-offset-4 ">
+                        <h4>Телефон</h4>
+                    </div>
+                    <div class="mui-textfield mui-col-md-3">
+                        @Html.TextBox("PhoneNumber", Model.PhoneNumber)
+                    </div>
+                    <div class=" mui-col-md-3 ">
+                        <h5>@Html.ValidationMessage("PhoneNumber")</h5>
+                    </div>
+                </div>
+
+
+
+                
+
+
+
+                <div class="mui-row">
+                    <div class="mui-col-md-1 mui-col-md-offset-4">
+                        <h4>Пол</h4>
+                    </div>
+                    <div class="mui-col-md-3">
+                        <div class="mui-radio">
+                            Мужской:@Html.RadioButton("Sex", Model.Sex)
+                        </div>
+                        <div class="mui-radio">
+                            Женский:@Html.RadioButton("Sex", !Model.Sex)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mui-row">
+                    <div class="mui-col-md-1 mui-col-md-offset-4 ">
+                        <h4>E-mail</h4>
+                    </div>
+                    <div class="mui-textfield mui-col-md-3">
+                        @Html.TextBox("Email", Model.Email)
+                    </div>
+                    <div class="mui-col-md-3">
+                        <h5>@Html.ValidationMessage("Email")</h5>
+                    </div>
+                </div>
+
+                <div class="mui-row">
+                    <div class="mui-col-md-1 mui-col-md-offset-4 ">
+                        <h4>Пароль</h4>
+                    </div>
+                    <div class="mui-textfield mui-col-md-3">
+                        @Html.TextBox("Password", Model.Password)
+                    </div>
+                    <div class="mui-col-md-3">
+                        <h5 style="color:red">@Html.ValidationMessage("Password")</h5>
+                    </div>
+                </div>
+
+                <div class="mui-row">
+                    <div class="mui-col-md-1 mui-col-md-offset-4 ">
+                        <h4>Повторить пароль</h4>
+                    </div>
+                    <div class="mui-textfield mui-col-md-3">
+                        @Html.TextBox("ConfirmPassword", Model.ConfirmPassword)
+                    </div>
+                    <div class="mui-col-md-3">
+                        <h5 style="color:red">@Html.ValidationMessage("ConfirmPassword")</h5>
+                    </div>
+                </div>
+                <br />
+                <div class="mui-row">
+                    <div class="mui-col-md-offset-5 mui-col-md-3 mui--align-middle" id="datepicker"></div>
+                    
+                </div>
+                <br />
+                <div class="mui-col-md-offset-5 mui-col-md-3 mui--align-middle">
+                    <input class="mui-btn mui-btn--raised mui-btn--primary" type="submit" value="Регистрация" />
+                </div>
+            </div>
+        }
+    </div>
+<script>
+    $("#datepicker").datepicker($.datepicker.regional["ru"]);
+
+
+    
+
+</script>
+
+}

@@ -1,0 +1,66 @@
+﻿@model InStep.Models.AuthUser
+
+@{
+    ViewBag.Title = "ВШаге";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section head {
+    <link rel="stylesheet" href="~/Views/Styles/main.css" />
+    <style>
+        .input-text {
+            font-size: 25px;
+            display: block;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .main-container {
+            padding-bottom: 30px;
+        }
+        .validation-summary-errors {
+            font-weight: bold;
+            color: #ff0000;
+        }
+    </style>
+}
+
+@section body {
+    @using (Html.BeginForm("Login", "Home"))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="mui-container">
+            <div class="mui-row">
+                <div class="mui-panel">
+                    <div class="mui-col-md-offset-4 mui-col-md-4 main-container">
+                        <center><h2>Welcome to InStep</h2></center>
+                        <div class="mui-textfield">
+
+                            @Html.TextBox("Email", Model.Email, new
+                               {
+                                   @class = "input-text",
+                                   placeholder = "Email"
+                               })
+
+                        </div>
+                        <div class="mui-textfield">
+                            @Html.TextBox("Password", Model.Password, new
+                               { 
+                                   @class = "input-text", 
+                                   placeholder = "Password", 
+                                   type = "Password"
+                               })
+                        </div>
+                        @Html.ValidationSummary()
+
+                        <input type="submit" value="Войти" class="input-text mui-btn mui-btn--primary" />
+                        <a href="#">Регистрация</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+}
+

@@ -1,0 +1,52 @@
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\InStep.dll.config
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\InStep.dll
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\InStep.pdb
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\EntityFramework.dll
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\EntityFramework.SqlServer.dll
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\System.Web.Helpers.dll
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\System.Web.Mvc.dll
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\System.Web.Razor.dll
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\System.Web.Webpages.Deployment.dll
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\System.Web.Webpages.dll
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\System.Web.Webpages.Razor.dll
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\EntityFramework.xml
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\EntityFramework.SqlServer.xml
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\System.Web.Razor.xml
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\System.Web.Webpages.xml
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\System.Web.Webpages.Deployment.xml
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\System.Web.Webpages.Razor.xml
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\System.Web.Helpers.xml
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\bin\System.Web.Mvc.xml
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\obj\Debug\InStep.dll
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\obj\Debug\InStep.pdb
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\obj\Debug\InStep.Migrations.first.resources
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\obj\Debug\InStep.csproj.GenerateResource.Cache
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\obj\Debug\InStep.Migrations.v2.resources
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\obj\Debug\InStep.csprojResolveAssemblyReference.cache
+C:\Users\ЫстыбаеваА\Desktop\ASP MVC project\InStep\InStep\obj\Debug\InStep.Migrations.v3.resources
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\InStep.dll.config
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\InStep.dll
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\InStep.pdb
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\EntityFramework.dll
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\EntityFramework.SqlServer.dll
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\System.Web.Helpers.dll
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\System.Web.Mvc.dll
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\System.Web.Razor.dll
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\System.Web.Webpages.Deployment.dll
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\System.Web.Webpages.dll
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\System.Web.Webpages.Razor.dll
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\EntityFramework.xml
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\EntityFramework.SqlServer.xml
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\System.Web.Razor.xml
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\System.Web.Webpages.xml
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\System.Web.Webpages.Deployment.xml
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\System.Web.Webpages.Razor.xml
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\System.Web.Helpers.xml
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\bin\System.Web.Mvc.xml
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\obj\Debug\InStep.csprojResolveAssemblyReference.cache
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\obj\Debug\InStep.Migrations.first.resources
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\obj\Debug\InStep.Migrations.v2.resources
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\obj\Debug\InStep.Migrations.v3.resources
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\obj\Debug\InStep.csproj.GenerateResource.Cache
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\obj\Debug\InStep.dll
+C:\Users\ЫстыбаеваА\Desktop\InStep\InStep\obj\Debug\InStep.pdb

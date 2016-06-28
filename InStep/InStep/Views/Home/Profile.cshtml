@@ -1,0 +1,301 @@
+﻿
+@*@model InStep.Models.UserProfile*@
+
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+@section head {
+    <title>@ViewBag.Title</title>
+    <!--meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <link href="http://cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Profile.css" rel="stylesheet" type="text/css" />
+    <script src="http://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="~/Scripts/Profile.js"></script-->
+    <style>
+        .left-nav-menu {
+            text-decoration:none;
+            list-style:none;
+            margin-top:15px;
+        }
+        .left-nav-menu li a {
+            padding:5px 3px;
+            display:block;
+            text-decoration:none;
+            font-size:16px;
+        }
+        .profile-info {
+            margin-top:-10px;
+        }
+        .btn-add-to-friend {
+            padding: 0;
+            width:100%;
+            margin:15px 0;
+        }
+        .name-panel {
+            font-size:20px;
+            padding-left:20px;
+        }
+        .header-text {
+            padding: 0 0 15px;
+        }
+        .name-panel {
+            padding:15px 15px 15px 30px;
+            width:100%;
+            background:#dee1ed;
+            margin-bottom: 15px;
+        }
+        .online-status {
+            font-size:13px;
+            float:right;
+        }
+        .friends-panel {
+            font-size:16px;
+            padding:10px 10px 10px 30px;
+            width:100%;
+            background:#dee1ed;
+        }
+        .friend-element {
+            float:left;
+            width:50px;
+            margin:10px 7px 0 7px;
+        }
+    </style>
+}
+
+@section body {
+    <div class="mui-row">
+        <div class="mui-col-md-3">
+            <ul class="left-nav-menu">
+                <li><a href="#">Моя страница</a></li>
+                <li><a href="#">Мои друзья</a></li>
+                <li><a href="#">Мои фотографии</a></li>
+                <li><a href="#">Мои аудиозаписи</a></li>
+                <li><a href="#">Мои новости</a></li>
+                <li><a href="#">Мои закладки</a></li>
+            </ul>
+        </div>
+
+        <div class="mui-col-md-8 mui-panel header-text">
+            <div class="name-panel">Павел Дуров<span class="online-status">Online</span></div>
+            <div class="mui-col-md-3">
+                <div class="avatar-container">
+                    <img src="http://pickaface.net/avatar/myspacedixson5247bbe83039a.png" width="100%" />
+                    <a class="mui-btn mui-btn--primary btn-add-to-friend" href="#">Редактировать</a>
+                </div>
+            </div>
+            <div class="mui-col-md-9">
+                <table width="100%">
+                    <tr><td colspan="2"><center><h4>Основная информация</h4></center></td></tr>
+                    <tr>
+                        <td>День рождения:</td>
+                        <td>16 декабря</td>
+                    </tr>
+                    <tr>
+                        <td>E-mail:</td>
+                        <td>durov@mypage.com</td>
+                    </tr>
+                    <tr>
+                        <td>Номер телефона:</td>
+                        <td>88005553535</td>
+                    </tr>
+                    <tr><td colspan="2"><hr /></td></tr>
+                    <tr><td colspan="2"><center><h4>Место жительства</h4></center></td></tr>
+                    <tr>
+                        <td>Страна:</td>
+                        <td>Россия</td>
+                    </tr>
+                    <tr>
+                        <td>Город:</td>
+                        <td>Томск</td>
+                    </tr>
+                    <tr>
+                        <td>Адрес:</td>
+                        <td>Ул. 9 Мая 5, кв 305</td>
+                    </tr>
+                    <tr><td colspan="2"><hr /></td></tr>
+                    <tr><td colspan="2"><center><h4>Контактная информация</h4></center></td></tr>
+                    <tr>
+                        <td>Доп телефон:</td>
+                        <td>88005553537</td>
+                    </tr>
+                    <tr>
+                        <td>Skype:</td>
+                        <td>durov.pasha</td>
+                    </tr>
+                    <tr>
+                        <td>Twitter:</td>
+                        <td>durov.pasha</td>
+                    </tr>
+                    <tr>
+                        <td>Owner site:</td>
+                        <td>http://telegram.org/</td>
+                    </tr>
+                    <tr><td colspan="2"><hr /></td></tr>
+                    <tr><td colspan="2"><center><h4>Интересы</h4></center></td></tr>
+                    <tr>
+                        <td>Главные интересы:</td>
+                        <td><div class="mui-textfield"><textarea disabled>Бегать босиком по улице</textarea></div></td>
+                    </tr>
+                    <tr>
+                        <td>Любимая музыка:</td>
+                        <td><div class="mui-textfield"><textarea disabled>Linkin Park</textarea></div></td>
+                    </tr>
+                    <tr>
+                        <td>Любимые фильмы:</td>
+                        <td><div class="mui-textfield"><textarea disabled>Форсаж</textarea></div></td>
+                    </tr>
+                    <tr>
+                        <td>Любимые книги:</td>
+                        <td><div class="mui-textfield"><textarea disabled>Портрет Дориана Грея</textarea></div></td>
+                    </tr>
+                    <tr>
+                        <td>Любимые игры:</td>
+                        <td><div class="mui-textfield"><textarea disabled>Overwatch</textarea></div></td>
+                    </tr>
+                    <tr>
+                        <td>О себе:</td>
+                        <td><div class="mui-textfield"><textarea disabled>Немного человек</textarea></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!--div class="mui-col-md-2 mui-col-md-offset-3 mui-panel header-text">
+            <div class="friends-panel">Друзья</div>
+            <div>
+                <div class="friend-element"><img src="http://pickaface.net/avatar/myspacedixson5247bbe83039a.png" width="50" height="50" /><center><a href="#">Name</a></center></div>
+                <div class="friend-element"><img src="http://pickaface.net/avatar/myspacedixson5247bbe83039a.png" width="50" height="50" /><center><a href="#">Name</a></center></div>
+                <div class="friend-element"><img src="http://pickaface.net/avatar/myspacedixson5247bbe83039a.png" width="50" height="50" /><center><a href="#">Name</a></center></div>
+                <div class="friend-element"><img src="http://pickaface.net/avatar/myspacedixson5247bbe83039a.png" width="50" height="50" /><center><a href="#">Name</a></center></div>
+                <div class="friend-element"><img src="http://pickaface.net/avatar/myspacedixson5247bbe83039a.png" width="50" height="50" /><center><a href="#">Name</a></center></div>
+                <div class="friend-element"><img src="http://pickaface.net/avatar/myspacedixson5247bbe83039a.png" width="50" height="50" /><center><a href="#">Name</a></center></div>
+                <div style="float:right;"><a href="#" style="color:#808080;font-size:13px">еще..</a></div>
+            </div>
+        </div-->
+
+        <div class="mui-col-md-8 mui-col-md-offset-3" style="padding-left:0;padding-right:0;">
+            <div class="mui-panel"></div>
+            <div class="mui-panel"></div>
+            <div class="mui-panel"></div>
+            <div class="mui-panel"></div>
+        </div>
+    </div>
+
+    <!--НАЧАЛО КОДА САШИ-->
+    <!--div id="sidedrawer" class="mui--no-user-select">
+        <div id="sidedrawer-brand" class="mui--appbar-line-height">InStep</div>
+        <div class="mui-divider"></div>
+        <ul>
+            <li>
+                <strong>Category 1</strong>
+                <ul>
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Category 2</strong>
+                <ul>
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Category 3</strong>
+                <ul>
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div-->
+
+    <!--header id="header">
+        <div class="mui-appbar mui--appbar-line-height">
+            <div class="mui-container-fluid">
+                <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
+                <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
+                <span class="mui--text-title mui--visible-xs-inline-block mui--visible-sm-inline-block">Brand.io</span>
+            </div>
+        </div>
+    </header-->
+
+    <!--div id="content-wrapper">
+        <div class="mui--appbar-height"></div>
+
+        <div id="ProfileData">
+
+            <div id="avatar">
+                <div id="photo" class="mui-container-fluid">
+
+                </div>
+
+                <div id="sub" class="mui-container-fluid">
+                    <div class="mui-dropdown">
+                        <button id="dropDown" class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">Dropdown<span class="mui-caret"></span></button>
+                        <ul class="mui-dropdown__menu">
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                            <li><a href="#">Option 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="profileInfo" class="mui-container-fluid">
+
+                <ul class="mui-tabs__bar mui-tabs__bar--justified">
+                    <li class="mui--is-active"><a data-mui-toggle="tab" data-mui-controls="pane-justified-1">RegionData</a></li>
+                    <li><a data-mui-toggle="tab" data-mui-controls="pane-justified-2">Contacts</a></li>
+                    <li><a data-mui-toggle="tab" data-mui-controls="pane-justified-3">Interests</a></li>
+                </ul>
+
+                <div class="mui-tabs__pane mui--is-active mui-container-fluid" id="pane-justified-1">
+                    <div id="regionData" class="mui-container-fluid dataBlock">
+                        <div> text </div>
+                        <div class="mui-divider"></div>
+                        <p><label>Country:</label> <span>Some Country</span></p>
+                        <p><label>City:</label> <span>Some City</span></p>
+                        <p><label>Address:</label> <span>Some Address</span></p>
+                    </div>
+                </div>
+
+                <div class="mui-tabs__pane mui-container-fluid" id="pane-justified-2">
+                    <div id="contacts" class="mui-container-fluid dataBlock">
+                        <p><label>Additional Phone:</label> <span>7(777)777-77-77</span></p>
+                        <p><label>Skype:</label> <span>SomeScreenName</span></p>
+                        <p><label>Twitter:</label> <span>SomeScreenName</span></p>
+                        <p><label>Owner Site:</label> <span>www.example.com</span></p>
+                    </div>
+                </div>
+
+                <div class="mui-tabs__pane mui-container-fluid" id="pane-justified-3">
+                    <div id="interests" class="mui-container-fluid dataBlock">
+                        <p><label>Interest:</label> <span>Interest</span></p>
+                        <p><label>FavoriteMusic:</label> <span>FavoriteMusic</span></p>
+                        <p><label>FavoriteFilms:</label> <span>FavoriteFilms</span></p>
+                        <p><label>FavoriteBooks:</label> <span>FavoriteBooks</span></p>
+                        <p><label>FavoriteGames:</label> <span>FavoriteGames</span></p>
+                        <p><label>About:</label> <span>About</span></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mui-container-fluid">
+            <div class="mui-container-fluid post"></div>
+            <div class="mui-container-fluid post"></div>
+            <div class="mui-container-fluid post"></div>
+        </div>
+    </div-->
+    <!--КОНЕЦ КОДА САШИ-->
+}

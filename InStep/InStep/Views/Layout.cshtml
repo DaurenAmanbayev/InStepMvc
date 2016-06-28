@@ -1,0 +1,95 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>    
+    
+    <!-- load MUI -->
+    <link href="//cdn.muicss.com/mui-0.6.0/css/mui.css" rel="stylesheet" type="text/css" />
+    <!--link href="~/Styles/main.css" rel="stylesheet" type="text/css" /-->
+    <script src="//cdn.muicss.com/mui-0.6.0/js/mui.js"></script>
+
+    <!-- load Roboto Font-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    @RenderSection("head")
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .nav-container {
+            height:64px;
+        }
+
+        .nav-menu-top {
+            list-style:none;
+            float:right;
+            height:100%;
+            vertical-align:middle;
+        }
+
+        .nav-menu-top li {
+            display:inline-block;
+            font-size:20px;
+            height:64px;
+        }
+
+        .nav-menu-top li a {
+            color:white;
+            display:block;
+            font-size:15px;
+            padding:23px 8px;
+            height:64px;
+            outline: none;
+        }
+
+        .nav-menu-top li a:hover {
+            color:#ECEFF1;
+            background:#37474F;
+            text-decoration:none;
+        }
+        
+        .nav-menu-top li a:current {
+            color:#ECEFF1;
+            background:#37474F;
+            text-decoration:none;
+        }
+
+        img.nav-logo {
+            padding-top: 3px;
+            height:64px;
+        }
+    </style>
+</head>
+<body style="background:#dee1ed;">
+    <div class="mui-appbar" style="background-color:#546E7A">
+        <div class="mui-container nav-container">
+            <div style="float:left;">
+                <a href="#"><img src="~/resources/logo/lg_othcolor-01.png" class="nav-logo" /></a>
+            </div>
+            <ul class="nav-menu-top">
+                <li><a href="#">ГЛАВНАЯ</a></li>
+                <li><a href="#">РЕГИСТРАЦИЯ</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mui-container">
+        @RenderSection("body")
+    </div>
+
+    <!--footer id="footer">
+        <div class="mui-container-fluid">
+            <p>Made with ♥ by <a href="#">MUI</a></p>
+        </div>
+    </footer-->
+</body>
+</html>
